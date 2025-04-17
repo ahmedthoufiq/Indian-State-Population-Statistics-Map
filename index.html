@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indian States Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div id="map-section">
+      <input 
+        type="text" 
+        id="search-bar" 
+        list="statesList" 
+        placeholder="Search for a state..." 
+        autocomplete="off"
+      />
+      <datalist id="statesList"></datalist>
+      <button id="searchBtn">Search</button>
+      <div id="map"></div>
+    </div>
+    <div id="sidebar">
+      <h2>State Information</h2>
+      <img 
+        id="state-image" 
+        src="India.jpg" 
+        alt="State Image" 
+        style="width: 100%; height: auto; margin: 10px 0; object-fit: contain;"
+      />
+      <div id="state-info">Click or search a state to see details.</div>
+      <canvas id="stateChart" width="300" height="200" style="margin-top: 20px;"></canvas>
+    </div>
+  </div>
+  
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
